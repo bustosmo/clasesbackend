@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma de números</title>
+</head>
+<body>
+    <h1>Suma de números</h1>
+
+    <script>
+        // Pedimos al usuario que ingrese un número
+        var numeroInicial = parseInt(prompt("Ingresa un número inicial:"));
+
+        // Comprobamos si el usuario ingresó un número válido
+        while (isNaN(numeroInicial)) {
+            numeroInicial = parseInt(prompt("Por favor, ingresa un número válido:"));
+        }
+
+        // Definimos el número que vamos a sumar en cada iteración
+        var numeroASumar = 5;
+
+        // Definimos una variable para almacenar el resultado
+        var resultado = numeroInicial;
+
+        // Mostramos el número inicial en la página web
+        document.write("<p>Número inicial: " + numeroInicial + "</p>");
+
+        // Bucle while para sumar el número en cada iteración
+        var i = 1;
+        while (i <= 5) { // Puedes cambiar este número para ajustar la cantidad de iteraciones
+            resultado += numeroASumar;
+            document.write("<p>Resultado después de la iteración " + i + ": " + resultado + "</p>");
+            i++;
+        }
+    </script>
+</body>
+</html>
